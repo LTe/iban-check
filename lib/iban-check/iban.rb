@@ -14,7 +14,7 @@ module Iban
 
     def check_branch
       number = self.branch.split(//)
-			number.pop
+      number.pop
 
       result = 0
 
@@ -34,10 +34,10 @@ module Iban
       end
 
       if result.to_s[-1] == 48
-				true
-			else
-				false
-			end
+        true
+      else
+        false
+      end
     end
 
     def checksum

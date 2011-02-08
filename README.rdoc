@@ -18,7 +18,7 @@ Check your IBAN number.
     iban = Iban::IbanCheck.new :iban => "IE55 AIBK 9311 5212 3456 78" # should be "IE29 AIBK 9311 5212 3456 78"
     iban.checksum => "29"
     iban.valid? => false
-    
+
 == Note on Patches/Pull Requests
 
 * Fork the project.
