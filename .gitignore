@@ -30,13 +30,15 @@ pkg
 #.DS_Store
 #
 # For TextMate
-#*.tmproj
-#tmtags
+*.tmproj
+tmtags
 #
 # For emacs:
-#*~
-#\#*
-#.\#*
+*~
+\#*
+.\#*
 #
 # For vim:
-#*.swp
+*.swp
+
+.idea
