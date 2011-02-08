@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "IbanCheck" do
   it "should create proper checksum from valid IBAN number" do
   	iban = Iban::IbanCheck.new :iban => "PL27 1140 2004 0000 3002 0135 5387"
-		iban.checksum.should == "27"
+	  iban.checksum.should == "27"
 		iban.iban?.should == true
 
 		iban = Iban::IbanCheck.new :iban => "HU42 1177 3016 1111 1018 0000 0000"

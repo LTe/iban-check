@@ -5,15 +5,19 @@ Check your IBAN number.
 
     iban = Iban::IbanCheck.new :iban => "PL27 1140 2004 0000 3002 0135 5387"
     iban.checksum => "27"
-    iban.iban? => true
+    iban.valid? => true
+
+    iban = Iban::IbanCheck.new :iban => "27 1140 2004 0000 3002 0135 5387", :country => "PL"
+    iban.checksum => "27"
+    iban.valid? => true
 
     iban = Iban::IbanCheck.new :iban => "GB29 NWBK 6016 1331 9268 19"
     iban.checksum => "29"
-    iban.iban? => true
+    iban.valid? => true
 
     iban = Iban::IbanCheck.new :iban => "IE55 AIBK 9311 5212 3456 78" # should be "IE29 AIBK 9311 5212 3456 78"
     iban.checksum => "29"
-    iban.iban? => false
+    iban.valid? => false
     
 == Note on Patches/Pull Requests
 

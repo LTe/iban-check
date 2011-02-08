@@ -54,6 +54,10 @@ module Iban
       checksum == iban[0..1]
     end
 
+    def valid?
+      iban?
+    end
+
     private
 
     def prepare_iban
