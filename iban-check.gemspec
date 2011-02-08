@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Piotr Nie\305\202acny"]
   s.date = %q{2011-02-08}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{Ruby class to validate iban numbers}
   s.email = %q{piotr.nielacny@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "iban-check.gemspec",
     "lib/iban-check.rb",
     "lib/iban-check/ext/array.rb",
     "lib/iban-check/ext/string.rb",
