@@ -18,7 +18,7 @@ describe "IbanCheck" do
   end
 
   it "should raise error -- no country" do
-    lambda {Iban::IbanCheck.new(:iban => "27 1140 2004 0010 3002 0135 5387")}.should raise_error
+    lambda {Iban::IbanCheck.new(:iban => "27 1140 2004 0010 3002 0135 5387")}.should raise_error(Iban::MissingCountryException)
   end
 
   it "should recognize country" do
