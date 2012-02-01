@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+lib_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
+
+require 'iban-check'
+
+abort("Exactly one argument expected") unless ARGV.size == 1
+
+begin
+  iban = Iban::IbanCheck.new :iban => ARGV.first
+rescue Iban::MissingCountryException
+  abort("Invalid country")
+end
+
+abort("Invalid IBAN") unless iban.iban?
+
+puts "Valid IBAN"
