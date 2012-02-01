@@ -1,4 +1,7 @@
 module Iban
+  class MissingCountryException < StandardError
+  end
+
   class IbanCheck
 
     BRANCH_WEIGHT       = [7,1,3,9,7,1,3]
@@ -85,7 +88,7 @@ module Iban
 
         result
       else
-        raise "No country specified"
+        raise MissingCountryException
       end
     end
 
