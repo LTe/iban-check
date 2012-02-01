@@ -19,6 +19,22 @@ Check your IBAN number.
     iban.checksum => "29"
     iban.valid? => false
 
+= Command line support
+
+The gem will install a `iban-check` command to allow IBAN validation from external programs.
+
+`iban-check` returns a zero exit-code if the IBAN is valid and a non-zero exit-code otherwise.
+
+Example:
+
+    $ iban-check "GB29 NWBK 6016 1331 9268 19"
+    Valid IBAN
+    => exit code 0
+
+    $ iban-check "XXX"
+    Invalid country
+    => exit code 1
+
 == Note on Patches/Pull Requests
 
 * Fork the project.

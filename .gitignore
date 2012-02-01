@@ -42,3 +42,4 @@ tmtags
 *.swp
 
 .idea
+.rvmrc

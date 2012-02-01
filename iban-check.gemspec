@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
     "spec/iban-check_spec.rb",
     "spec/spec_helper.rb"
   ]
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
