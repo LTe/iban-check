@@ -43,7 +43,6 @@ PLATFORMS
 DEPENDENCIES
   aruba
   bundler (~> 1.0.0)
-  cucumber
   jeweler (~> 1.5.2)
   rcov
   rspec

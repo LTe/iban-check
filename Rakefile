@@ -27,12 +27,7 @@ task :spec do
   raise unless system 'bundle exec rspec spec'
 end
 
-desc "Run cucumber"
-task :cucumber do
-  raise unless system 'bundle exec cucumber features'
-end
-
-task :default => [:spec, :cucumber]
+task :default => [:spec]
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
