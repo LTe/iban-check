@@ -36,7 +36,7 @@ module Iban
         result += item.to_i * BRANCH_WEIGHT_CHECK[index]
       end
 
-      if result.to_s[-1] == 48
+      if result.to_s[-1].ord == 48
         true
       else
         false
