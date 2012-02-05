@@ -1,4 +1,8 @@
 = Iban-check
+
+[![Build Status](https://secure.travis-ci.org/LTe/iban-check.png)](http://travis-ci.org/LTe/iban-check) [![Dependency Status](https://gemnasium.com/LTe/iban-check.png)](https://gemnasium.com/LTe/iban-check)
+
+
 Check your IBAN number.
 
 = Usage
