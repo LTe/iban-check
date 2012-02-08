@@ -5,6 +5,7 @@ describe "Command line" do
   include Aruba::Api
 
   before(:all) do
+    @aruba_timeout_seconds = 10
     extra_path_folder = File.join(File.expand_path(File.dirname(__FILE__)), '../bin')
     ENV['PATH'] = [extra_path_folder, ENV['PATH']].join(File::PATH_SEPARATOR)
   end
