@@ -28,6 +28,11 @@ module Iban
       result % 10
     end
 
+    def recalculate_checksum
+      store_checksum = checksum
+      store_checksum + iban.slice(2,iban.length)
+    end
+
     def branch?
       number = self.branch.split(//)
       result = 0

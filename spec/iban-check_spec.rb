@@ -39,4 +39,11 @@ describe "IbanCheck" do
     iban.branch?.should == true
   end
 
+  it "should return iban with recalculated checksum" do
+    iban = Iban::IbanCheck.new :iban      => "PL00 1140 2004 0000 3002 0135 5387"
+    iban.checksum.should == "27"
+
+    iban.recalculate_checksum.should ==   "27114020040000300201355387"
+  end
+
 end
